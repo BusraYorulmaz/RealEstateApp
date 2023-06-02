@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstateAppMaui.Pages.HomePage"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <Grid Margin="20" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <VerticalStackLayout Grid.Row="0" Spacing="5">
+                <Label x:Name="LblUserName"
+                   FontSize="Large"/>
+                <Label Text="Find your best place to stay"
+                   FontSize="Medium"/>
+            </VerticalStackLayout>
+
+            <Frame Grid.Row="1"
+               Padding="15">
+                <HorizontalStackLayout Spacing="20">
+                    <Image Source="search_icon"
+                       HeightRequest="25"
+                       WidthRequest="25"
+                       Aspect="AspectFill"/>
+                    <Label Text="Search..."
+                       VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapSearch" Tapped="TapSearch_Tapped"
+                                          />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <VerticalStackLayout Grid.Row="2" Spacing="20">
+                <Label Text="Categories"
+                   FontSize="Large"/>
+                <CollectionView x:Name="CvCategories" HeightRequest="50"
+                                SelectionMode="Single"
+                                SelectionChanged="CvCategories_SelectionChanged">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="5" Orientation="Horizontal"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <!--<Frame Padding="10">-->
+                            <Border Margin="0"
+                                    Padding="7,0" 
+                                    StrokeShape="RoundRectangle 10">
+                                <HorizontalStackLayout Spacing="0">
+                                    <Image Aspect="AspectFill"
+                                           HeightRequest="25"
+                                           WidthRequest="25"
+                                           Source="{Binding FullImageUrl}"/>
+                                    <Label VerticalOptions="Center"
+                                           FontSize="Subtitle"
+                                           
+                                           TextColor="Black"
+                                           Text="{Binding Name}"/>
+                                </HorizontalStackLayout>
+                            </Border>
+                            <!--</Frame>-->
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="3" Spacing="20">
+                <Label Text="Trends" FontSize="Large"/>
+                <CollectionView x:Name="CvTopPicks" 
+                                HeightRequest="350"
+                                SelectionMode="Single"
+                                SelectionChanged="CvTopPicks_SelectionChanged">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="20" Orientation="Horizontal"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <!--<Frame CornerRadius="25" Padding="15" BackgroundColor="LightGrey">-->
+                            <Border Margin="5"
+                                    Padding="15" 
+                                    StrokeShape="RoundRectangle 15">
+                                <Grid RowSpacing="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Frame Grid.Row="0"
+                                           HeightRequest="200"
+                                           WidthRequest="250"
+                                           CornerRadius="15"
+                                           Padding="0"
+                                           IsClippedToBounds="True">
+                                        <Image Source="{Binding FullImageUrl}"
+                                               Aspect="Fill"/>
+                                    </Frame>
+                                    <Label Grid.Row="1"
+                                           FontSize="Subtitle"
+                                           FontAttributes="Bold"
+                                           Text="{Binding Name}"/>
+                                    <Label Grid.Row="2"
+                                           FontSize="Small"
+                                           LineBreakMode="TailTruncation"
+                                           MaxLines="2"
+                                           Text="{Binding Address}"/>
+                                    <Label Grid.Row="3"
+                                           FontSize="Large"
+                                           TextColor="#1d94ab"
+                                           Text="{Binding Price}"/>
+                                </Grid>
+                            </Border>
+
+                            <!--</Frame>-->
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

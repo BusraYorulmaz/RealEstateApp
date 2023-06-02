@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstateAppMaui.Pages.RegisterPage"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout VerticalOptions="Center"
+                         Margin="20,0"
+                         Spacing="20">
+        <Image Source="dotnet_bot"
+               HorizontalOptions="Center"
+               HeightRequest="80"
+               WidthRequest="80"/>
+        <Label Text="Create a new account"
+               TextColor="Black"
+               FontSize="Large"
+               HorizontalOptions="Center"/>
+        <Label Text="Plase enter your information"
+               TextColor="LightSlateGray"
+               FontSize="Small"
+               HorizontalOptions="Center"/>
+        <Frame Padding="15,2">
+            <Entry x:Name="EntryFullName"
+               Placeholder="Full Name"/>
+        </Frame>
+        <Frame Padding="15,2">
+            <Entry x:Name="EntryEmail"
+               Placeholder="Email" Keyboard="Email"/>
+        </Frame>
+        <Frame Padding="15,2">
+            <Entry x:Name="EntryPhone"
+               Placeholder="Phone" Keyboard="Telephone"/>
+        </Frame>
+        <Frame Padding="15,2">
+            <Entry x:Name="EntryPassword"
+               Placeholder="Password"
+               IsPassword="True"/>
+        </Frame>
+        <Button x:Name="BtnRrgister"
+                Text="Register Now"
+                HeightRequest="50"
+                FontSize="Medium"
+                BackgroundColor="#1d94ab"
+                Clicked="BtnRrgister_Clicked"/>
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Already have an account?"
+                   FontSize="Medium"
+                   TextColor="Black"/>
+            <Label Text="Sign In"
+                   FontSize="Medium"
+                   TextColor="Blue"/>
+            <HorizontalStackLayout.GestureRecognizers>
+                <TapGestureRecognizer x:Name="TapLogin" Tapped="TapLogin_Tapped"/>
+            </HorizontalStackLayout.GestureRecognizers>
+
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
