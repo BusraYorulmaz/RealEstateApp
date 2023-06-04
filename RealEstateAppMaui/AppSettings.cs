@@ -8,6 +8,6 @@ namespace RealEstateAppMaui
 {
     public static class AppSettings
     {
-       public static string ApiUrl = "https://tallredrock90.conveyor.cloud/";
+       public static string ApiUrl = "https://fastyellowdart66.conveyor.cloud/";
     }
 }

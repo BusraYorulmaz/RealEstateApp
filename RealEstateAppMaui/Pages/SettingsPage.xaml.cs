@@ -15,7 +15,16 @@ public partial class SettingsPage : ContentPage
     }
     private void tapAbout_Tapped(object sender, EventArgs e)
     {
-        BottomPopup.IsVisible = true;
+        //BottomPopup.IsVisible = true;
+
+        if (BottomPopup.IsVisible)
+        {
+            BottomPopup.IsVisible = false;
+        }
+        else
+        {
+            BottomPopup.IsVisible = true;
+        }
     }
 
     private void okButton_Clicked(object sender, EventArgs e)
@@ -26,7 +35,15 @@ public partial class SettingsPage : ContentPage
 
     private void tapAbout1_Tapped(object sender, EventArgs e)
     {
-        BottomPopup1.IsVisible = true;
+       // BottomPopup1.IsVisible = true;
+        if (BottomPopup1.IsVisible)
+        {
+            BottomPopup1.IsVisible = false;
+        }
+        else
+        {
+            BottomPopup1.IsVisible = true;
+        }
     }
 
     private void TapMessage_Tapped(object sender, EventArgs e)
@@ -43,5 +60,10 @@ public partial class SettingsPage : ContentPage
     private void Button_Clicked(object sender, EventArgs e)
     {
         BottomPopup1.IsVisible = false;
+    }
+
+    private void ImageButton_Clicked(object sender, EventArgs e)
+    {
+        BottomPopup.IsVisible = true;
     }
 }

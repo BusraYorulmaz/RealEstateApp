@@ -18,6 +18,7 @@
                     <Label Text="About Us"
                        VerticalOptions="Center"
                        FontSize="Medium"/>
+                    
                     <HorizontalStackLayout.GestureRecognizers>
                         <TapGestureRecognizer x:Name="tapAbout" Tapped="tapAbout_Tapped"/>
                     </HorizontalStackLayout.GestureRecognizers>
@@ -32,20 +33,10 @@
            Padding="10">
                 <StackLayout>
                     <Label Margin="10" Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."/>
-                    <Button Text="ok" Clicked="okButton_Clicked" Margin="120,10,120,0" Padding="9" TextColor="Black" BackgroundColor="Lavender" />
-                </StackLayout>
+                   </StackLayout>
             </Frame>
 
-            <Frame Padding="10">
-                <HorizontalStackLayout Spacing="20">
-                    <Image  Source="privacy_icon"
-                        HeightRequest="30"
-                        WidthRequest="30"/>
-                    <Label Text="Privacy &amp; Security"
-                       VerticalOptions="Center"
-                       FontSize="Medium"/>
-                </HorizontalStackLayout>
-            </Frame>
+           
             <Frame Padding="10">
                 <HorizontalStackLayout Spacing="20">
                     <Image  Source="faq_icon"
@@ -54,6 +45,7 @@
                     <Label Text="Help and Support"
                        VerticalOptions="Center"
                        FontSize="Medium"/>
+                    
                     <HorizontalStackLayout.GestureRecognizers>
                         <TapGestureRecognizer x:Name="tapAbout1" Tapped="tapAbout1_Tapped"/>
                     </HorizontalStackLayout.GestureRecognizers>
@@ -75,10 +67,7 @@
                                HorizontalOptions="Center"
                                Spacing="30">
 
-                        <Frame HeightRequest="70"
-                   WidthRequest="70"
-                   CornerRadius="35"
-                   BackgroundColor="Green">
+                        <Frame HeightRequest="70" WidthRequest="70" CornerRadius="35" BackgroundColor="Green">
                             <HorizontalStackLayout Spacing="1" Padding="0">
                                 <Image HeightRequest="25" WidthRequest="25" VerticalOptions="Center" Source="message_icon"/>
                             </HorizontalStackLayout>
@@ -99,9 +88,7 @@
                                 <TapGestureRecognizer x:Name="TapCall1" Tapped="TapCall1_Tapped"/>
                             </Frame.GestureRecognizers>
                         </Frame>
-                        <Button  HeightRequest="40" 
-                                 WidthRequest="40"
-                                 CornerRadius="50" Text="ok" Clicked="Button_Clicked" Margin="0" Padding="9" TextColor="Black" BackgroundColor="Lavender" />
+                       
 
                     </HorizontalStackLayout>
                 </StackLayout>
