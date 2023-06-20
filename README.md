@@ -5,7 +5,7 @@ It is a real estate application which is made with .NET MAUI.
 - .NET MAUİ
 - MVVM
 - ASP.NET CORE WEB API
-- ENTITY FREAMWORK
+- ENTITY FRAMEWORK
 - TOOKEN
 
 ## :camera_flash: Screenshot :
